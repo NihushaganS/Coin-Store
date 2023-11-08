@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Store</title>
+  <link rel="stylesheet" href="index.css" type="text/css"> <!--External style sheet named index attached-->
+</head>
+
+<body>
+  <header>
+    <a href="/index.html"><img src="/logo.jpg" alt="Logo of Coin Store" height="80px" width="auto"></a>
+    <nav>
+      <ul class="Navigation">
+        <li><button onclick="about()">About</button></li>
+        <li><a href="comments.html"><button>Comment</button></a></li>
+        <li><a href="/form.html"><button>Join us for free</button></a></li>
+      </ul>
+    </nav>
+    <a href="http://www.gmail.com/" target="_blank"><button onclick="alert('\nIf you wish to contribute to our website\n Please send your collection of coins to [ coinstore@gmail.com ]\n We will review it and add it to our page')";>Contact us</button></a>
+  </header>
+
+  <p id="aboutmessage" style=" color: rgb(210, 194, 104); margin-left: 20%; margin-right: 20%; font-size: 18px; font-family:monospace; text-align: center;"></p>
+
+
+  <img src="/background.jpg" alt="Coin Collection" style="margin-left: 15%; width: 80%; height: auto;margin-top: 5%;">
+
+  <div class="reference">
+    <ul style="list-style-type: circle;">
+      <li> <a href="srilankan.html"><button>Srilankan Coins</button></a></li>
+      <br><br>
+      <li> <a href="indian.html"><button>Indian Coins</button></a></li>
+      <br><br>
+      <li> <a href="UnitedKingdom.html"><button>United Kingdom Coins</button></a></li>
+      <br><br>
+      <li> <a href="canadian.html"><button>Canadian Coins</button></a></li>
+      <br><br>
+      <li> <a href="italian.html"><button>Italian Coins</button></a></li>
+      <br><br>
+      <li> <a href="others.html"><button>Common Coins</button></a></li>
+    </ul>
+  </div>
+  <br><br>
+  <hr>
+  <br><br>
+  <nav class="foot">
+    <a href="srilankan.html"> <button>Next page</button></a>
+    <a href="index.html"> <button>Home</button></a>
+  </nav>
+  <footer class="links">&copy;2023; COIN STORE
+    <a href="http://www.facebook.com/" target="_blank"><button>Facebook</button></a>
+    <a href="http://www.twitter.com/" target="_blank"> <button>Twitter</button></a>
+    <a href="http://www.instagram.com/" target="_blank"> <button>Instagram</button></a>
+  </footer>
+<script>
+  function about() {
+   document.getElementById("aboutmessage").innerHTML = "<u>Welcome to <b>COIN STORE!</b></u><br><br> We are a community of coin collectors who are passionate about collecting coins from around the world. Anyone may engage, learn, and explore the fascinating area of numismatics on our website.<br><br> Our website is the ideal place to learn about and enjoy the beauty and legacy of coins, regardless of whether you are an experienced collector or are just getting started. We provide members with various knowledge and chances to share their collections and take part in discussions about all aspects of coin collecting.<br><br> We warmly invite you to become a part of our community and experience the joy of coin collecting. We may learn about numismatics as a community and appreciate the unique histories that each coin represents.";
+  }
+</script>
+</body>
+
+</html>

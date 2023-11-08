@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comments</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+  <header>
+    <a href="/index.html"><img src="/logo.jpg" alt="Logo of Coin Store" height="80px" width="auto"
+        onclick="alert('Are you sure, Want to leave the current page?')" ;></a>
+    <nav>
+      <ul class="Navigation">
+        <li><button onclick="about()">About</button></li>
+        <li><a href="comments.html"><button>Comment</button></a></li>
+        <li><a href="/form.html"><button>Join us for free</button></a></li>
+      </ul>
+    </nav>
+    <a href="http://www.gmail.com/" target="_blank"><button onclick="alert('\nIf you wish to contribute to our website\n Please send your collection of coins to [ coinstore@gmail.com ]\n We will review it and add it to our page')";>Contact us</button></a>
+  </header>
+  <h2 class="name" style="font-size: 38px;">Comments</h2>
+
+  <p id="aboutmessage"
+    style="  color: rgb(210, 194, 104); margin-left: 20%; margin-right: 20%; font-size: 18px; font-family:monospace; text-align: center; text-decoration: ;">
+  </p>
+
+
+  <div id="app">
+    <li v-for="comment in comments">
+      <strong>{{ comment.name }}</strong> - {{ comment.comment }}
+      <button class="btn btn-danger" @click="deleteComment(comment)" >Delete</button>
+    </li>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <label for="name" style="margin-left: 60%; margin-top: 20%;">Name:</label>
+          <input type="text" class="form-control" id="name" v-model="name" style="margin-left: 60%; margin-top: 3%;margin-bottom: 10%; width: 300px; height: 20px; background-color: rgb(245, 223, 103);">
+        </div>
+        <div class="form-group">
+          <label for="comment"  style="margin-left: 60%; margin-top: 20%;">Comment:</label>
+          <textarea class="form-control" id="comment" rows="4" v-model="comment" style="margin-left: 60%; margin-top: 3%; width: 600px; height: 100px; background-color: rgb(245, 223, 103);"></textarea>
+        </div>
+        <button class="btn btn-primary" v-on:click="addComment()" style="margin-left: 60%; margin-top: 10%;">Add Comment</button>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-8" v-for="(comment, index) in comments" :key="index">
+        <div class="card">
+          <div class="card-header">{{ comment.name }}</div>
+          <div class="card-body">
+            <p>{{ comment.comment }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <br><br>
+
+  <nav class="foot">
+    <a href="canadian.html"><button>Previous page</button></a>
+    <a href="srilankan.html"> <button>Next page</button></a>
+    <a href="index.html"> <button>Home</button></a>
+  </nav>
+
+  <footer class="links">&copy;2023, COIN STORE
+    <a href="http://www.facebook.com/" target="_blank"><button>Facebook</button></a>
+    <a href="http://www.twitter.com/" target="_blank"> <button>Twitter</button></a>
+    <a href="http://www.instagram.com/" target="_blank"> <button>Instagram</button></a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+    </script>
+
+  <script>
+  function about() {
+  document.getElementById("aboutmessage").innerHTML = "<u>Welcome to the Comment section!</u><br><br> Here you can add comments and feedbacks about our website";
+  }
+
+
+  new Vue({
+  el: '#app',
+  data: {
+  name: '',
+  comment: '',
+  comments: []
+  },
+  methods: {
+  addComment() {
+  if (this.name.trim() !== '' && this.comment.trim() !== '') {
+  this.comments.push({
+  name: this.name,
+  comment: this.comment
+  });
+  this.name = '';
+  this.comment = '';
+  }
+  }
+  ,
+  deleteComment: function (comment) {
+  var index = this.comments.indexOf(comment);
+  this.comments.splice(index, 1);
+  }
+  }
+  });
+
+  </script>
+</body>
+
+</html>

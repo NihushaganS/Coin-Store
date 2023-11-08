@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+  <header>
+    <a href="/index.html"><img src="/logo.jpg" alt="Logo of Coin Store" height="80px" width="auto" onclick="alert('Are you sure, Want to leave the current page?')" ;></a>
+    <nav>
+      <ul class="Navigation">
+        <li><a href="/index.html"><button>Home</button></a></li>
+        <li><a href="comments.html"><button>Comment</button></a></li>
+        <li><a href="/form.html"><button>Join us for free</button></a></li>
+      </ul>
+    </nav>
+    <a href="http://www.gmail.com/" target="_blank"><button onclick="alert('\nIf you wish to contribute to our website\n Please send your collection of coins to [ coinstore@gmail.com ]\n We will review it and add it to our page')";>Contact us</button></a>
+  </header>
+  <form action="post">
+    <h2>Fill this to join us for free</h2>
+    <div class="data">
+      <div class="fname">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" placeholder="Enter your first name" required>
+      </div>
+
+      <div class="lname">
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" placeholder="Enter your last name" required>
+      </div>
+
+      <div class="mail">
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Enter your email address" required>
+      </div>
+
+      <div class="pass">
+        <label for="password">Password:</label>
+        <input type="text" id="password" placeholder="Enter a strong password" required>
+      </div>
+
+      <div class="bdate">
+        <label for="birthdate">Birth Date</label>
+        <input type="date" id="birthdate" required>
+      </div>
+
+      <div class="Gender">
+        <label>Gender:</label>
+
+        <input type="radio" value="male" id="male" name="gender">
+        <label for="male">Male</label>
+
+        <input type="radio" value="female" id="female" name="gender">
+        <label for="female">Female</label>
+
+        <input type="radio" value="other" id="other" name="gender">
+        <label for="other">Other</label>
+      </div>
+
+      <div class="pnumber">
+        <label for="phone">Phone Number:</label>
+        <input type="number" id="phone" required>
+      </div>
+
+      <div class="reg">
+        <input type="submit" id="register" value="Register" width="300px"
+        onclick="alert('Check all your entered details are correct')";>
+      </div>
+
+    </div>
+    <br><br>
+    <hr>
+
+  </form>
+  
+</body>
+</html>

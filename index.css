@@ -1,0 +1,93 @@
+body{
+  background-color: rgb(0, 0, 0);
+  color: rgb(220, 213, 213);
+  font-family:  Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+h3{
+  margin-left: 90px;
+margin-right: 90px;
+margin-top: 80px;
+font-size: 27px;
+color: rgb(202, 195, 99);
+}
+#site{
+  font-size: 60px;
+  font-style: normal;
+  color: rgb(249, 212, 4);
+}
+#about{
+margin-left: 140px;
+margin-right: 140px;
+margin-top: 85px;
+}
+#home{
+  margin-top: 10px;
+  text-align: right;
+}
+.reference{
+margin-top: 10%;
+margin-left: 34%;
+}
+.foot{
+  margin-left: 45%;
+  display: inline;
+  margin-top: 15%;
+}
+.reference button{
+  width: 400px;
+  height: 40px;
+  font-size: 23px;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  text-decoration: underline;
+ 
+  background-color: rgb(240, 217, 83);
+}
+.reference button:hover{
+  background-color: aliceblue;
+}
+.identity{
+margin-left: 70%;
+margin-top: 5px;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.Navigation{
+  list-style: none;
+}
+.Navigation li{
+  display: inline-block;
+  padding: 0px 18px ;
+}
+button{
+  padding: 5px 14px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 35px;
+ font-style: italic;
+}
+button{
+  transition: all 0.4s ease 0s;
+}
+button:hover{
+  background-color: rgb(240, 217, 83);
+}
+footer{
+  margin-left: 40%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: 'Courier New', Courier, monospace;
+}
+footer button{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+footer button:hover{
+  background-color: rgb(255, 231, 97);
+}
